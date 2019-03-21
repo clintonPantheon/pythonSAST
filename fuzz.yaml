@@ -1,0 +1,13 @@
+base: ubuntu:16.04
+language: python
+targets:
+  - name: tutorial-python2
+    version: "2.7"
+    harness:
+      function: FuzzerEntrypoint
+      file: src/fuzz27.py
+  - name: tutorial-python3
+    version: "3.6"
+    harness:
+      function: FuzzerEntrypoint
+      file: src/fuzz3.py
